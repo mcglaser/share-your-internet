@@ -1,0 +1,30 @@
+      <!-- Intro/Welcome/Logo/Tagline -->
+
+      <div class="intro">
+         <img src="http://www.iamthemodernman.biz/internet/2/images/router3.png" alt="Router" height="250" width="325">
+         <h1>SHARE YOUR INTERNET</h1>
+         <img src="http://www.iamthemodernman.biz/internet/2/images/wifi100icon.png" alt="wifi symbol" height="50" width="50">
+         <h2>Share Wi-Fi With Neighbors And Save</h2>
+
+       <% if !logged_in? %>
+         <%= button_to "Start Here", new_user_path, :class => "btn btn-lg btn-outline", :method => :get %>
+       <% else %>
+         <%= button_to "Start Here", user_path(current_user), :class => "btn btn-lg btn-outline", :method => :get %>
+       <% end %> 
+
+
+
+
+
+
+      </div>
+
+
+      <!-- How It Works/About -->
+
+
+      <div class="about">
+         <h1>How It Works</h1>
+         <img src="http://www.iamthemodernman.biz/internet/2/images/steps.png" alt="How It Works" height="378" width="455">
+         <h1><a href="#" class="altbtn altbtn-lg altbtn-outline">Read More</a></h1>
+      </div>

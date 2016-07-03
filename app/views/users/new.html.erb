@@ -1,0 +1,14 @@
+<div class="stretch">
+
+  <h1>Sign-Up</h1>
+  
+  <%= form_for(@user) do |f| %>
+
+    <label>E-mail Address:</label><br>
+    <%= f.text_field :email %><br>
+
+  <%= f.submit %>
+  <% end %>
+
+
+</div>

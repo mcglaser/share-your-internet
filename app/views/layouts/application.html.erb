@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Share Your Internet - Share Wi-Fi With Neighbors And Save</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <meta name="description" content="Share Wi-Fi With Your Neighbors And Save Money">
+  <meta name="keywords" content="share internet, share wifi, internet share, wifi share, save money on internet">
+  <meta name="Classification" content="internet, wifi, internet sharing">
+  <link rel="icon" 
+     type="image/x-icon" 
+     href="http://www.iamthemodernman.biz/internet/2/images/favicon.ico">
+  <!--
+     <script type="text/javascript">
+       if (screen.width <= 599) {
+         window.location = "http://www.site.com/mobile.html";
+       }
+     </script>
+    -->
+</head>
+
+  <body>
+
+      <!-- Header/Menu -->
+
+      <div class="top">
+         <div class="header">
+            <a href="<%= root_url %>">
+               <img src="http://www.iamthemodernman.biz/internet/2/images/wifiblueicon.png" alt="logo" height="50" width="50"></a>
+               <ul>
+                 <li id="logo"><a href="<%= root_url %>">SHARE YOUR INTERNET</a></li>
+                 <li><a href="#">FAQ</a></li>
+                 <% if !logged_in? %>
+			      <li><%= link_to "Log In", signin_path %></li>
+			      <li><%= link_to "Sign up", new_user_path %></li>
+			    <% else %>
+			      <li><%= link_to "Log Out", signout_path, method: :destory %></li>
+			    <% end %>
+ 
+
+
+
+
+
+
+
+               </ul>
+         </div>
+      </div>
+
+
+      <%= yield %>
+
+
+      <!-- Social Media -->
+
+
+      <div class="footer">
+         <a href="#"><img src="http://www.iamthemodernman.biz/internet/2/images/facebookrounded.png" alt="facebook" height="50" width="50"></a>
+         <a href="#"><img src="http://www.iamthemodernman.biz/internet/2/images/twitterlargeicon.png" alt="twitter" height="50" width="50"></a>
+         <a href="#"><img src="http://www.iamthemodernman.biz/internet/2/images/redditcircle.png" alt="reddit" height="50" width="50"></a>
+      </div>
+
+      <!-- Copyright -->
+
+      <div class="copyright">
+         <p>Copyright 2016 ShareYourInternet.com</p>
+      </div>
+   </body>
+</html>
+
+
+
+
+
+</html>
