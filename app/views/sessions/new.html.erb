@@ -1,2 +1,20 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="stretch">
+
+  <h1>Log In</h1>
+
+  <div class="form">
+
+
+
+  
+  <%= form_for :user do |f| %>
+
+    <label>E-mail Address: <%= f.text_field :email %></label><br>
+    <label>Password: <%= f.password_field :password %></label><br>
+
+  <%= f.submit 'Log In', :class => 'altbtn altbtn-lg altbtn-outline' %>
+  <% end %>
+
+  </div>
+
+</div>
