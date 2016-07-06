@@ -26,6 +26,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 
 
 # Use ActiveModel has_secure_password

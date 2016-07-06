@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
   post '/signout' => 'sessions#destroy'
+  post '/addresses/new' => 'addresses#create'
 
 
+  resources :addresses 
   resources :users
 
   root 'welcome#index'

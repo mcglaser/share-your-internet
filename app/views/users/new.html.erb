@@ -2,7 +2,7 @@
 
   <h1>Sign-Up</h1>
 
-  <div class="form">
+
 
 
   <% if @user.errors.any? %>
@@ -16,16 +16,21 @@
     </div>
   <% end %>
 
-  
+   <%= link_to("Sign Up Via Twitter!", "	https://api.twitter.com/oauth/request_token") %>
+   <br><br>
+
+  <div class="form">
   <%= form_for(@user) do |f| %>
 
     <label>E-mail Address: <%= f.text_field :email %></label><br>
     <label>Password: <%= f.password_field :password %></label><br>
     <label> Confirm Password: <%= f.password_field :password_confirmation %></label><br>
 
-  <%= f.submit 'Sign Up', :class => 'altbtn altbtn-lg altbtn-outline' %>
-  <% end %>
-
   </div>
+
+    <%= f.submit 'Sign Up', :class => 'altbtn altbtn-lg altbtn-outline' %>
+    <% end %>
+
+  <h2>Already Have An Account? <%= link_to "Log In", signin_path %></h2>
 
 </div>

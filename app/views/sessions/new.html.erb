@@ -2,19 +2,21 @@
 
   <h1>Log In</h1>
 
+
   <div class="form">
 
-
-
-  
   <%= form_for :user do |f| %>
 
     <label>E-mail Address: <%= f.text_field :email %></label><br>
     <label>Password: <%= f.password_field :password %></label><br>
 
+  </div>  
+
   <%= f.submit 'Log In', :class => 'altbtn altbtn-lg altbtn-outline' %>
   <% end %>
 
-  </div>
+
+    <h2>First Time Here? <%= link_to "Sign Up", new_user_path %></h2>
+
 
 </div>

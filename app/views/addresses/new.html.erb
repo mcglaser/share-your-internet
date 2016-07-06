@@ -2,19 +2,40 @@
 
   <h1>Please Enter Your Address</h1>
 
+
+
+  <% if @address.errors.any? %>
+  <div id="error_explanation">
+ 
+    <ul>
+    <% @address.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
+
+
+
   <div class="form">
 
-  <%= form_for :user do |f| %>
+  <%= form_for :address do |f| %>
 
     <label>Address 1: <%= f.text_field :address_line_one %></label><br>
     <label>Address 2: <%= f.text_field :address_line_two %></label><br>
     <label>City: <%= f.text_field :city %></label><br>
     <label>State/Province/Territory: <%= f.text_field :state %></label><br>
-
+     <label>Postal Code: <%= f.text_field :postal_code %></label><br>
   </div>  
 
   <%= f.submit 'Continue', :class => 'altbtn altbtn-lg altbtn-outline' %>
   <% end %>
+
+
+
 
 
 </div>

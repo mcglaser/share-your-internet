@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
   end
-
+ 
 
    def create
     @user = User.find_by(email: params[:user][:email])
@@ -9,12 +9,11 @@ class SessionsController < ApplicationController
       redirect_to signin_path
     elsif @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
-        redirect_to user_path(@user)
+        redirect_to new_address_path
       else
         redirect_to signin_path
       end
-  end 
-
+   end 
 
 
   def destroy
@@ -30,6 +29,14 @@ class SessionsController < ApplicationController
   def destroy
     session.delete :user_id
     redirect_to root_url
+  end
+
+
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
   end
 
 

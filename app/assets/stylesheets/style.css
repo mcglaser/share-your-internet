@@ -201,7 +201,7 @@ time, mark, audio, video {
 }
 
 .stretch {
-    height: 600px;
+    height: 732px;
     width: 100%;
     margin: 0px auto;
     background-color: #ffffff;
@@ -216,10 +216,33 @@ time, mark, audio, video {
     padding: 35px 0;
 }
 
+.stretch h2 {
+    color: #2C3E50;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 35px 0;
+}
+
+.stretch a {
+    text-decoration: none;
+    color: #18BC9C;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -o-transition: .8s;
+    -ms-transition: .8s;
+    -moz-transition: .8s;
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+
+.stretch a:hover {
+    color: #18BC9C;
+}
+
 
 /*######## Smart Green ########*/
 .form {
-    margin-left: 30%;
+    margin-left: 40%;
     margin-right: 30%;
     text-align: center;
     min-width: 400px;
