@@ -1,0 +1,21 @@
+<div class="stretch">
+
+  <h1>Additional Information</h1>
+
+
+
+  <div class="form">
+
+  <%= form_for :detail do |f| %>
+
+    <label>Do you currently pay for internet in your home?<br><br> <%= f.select :pays_for_internet, [['Yes', true], ['No', false]] %></label><br>
+    <label>Do you live in a private community (such as an apartment complex or a gated community)?<br><br> <%= f.select :lives_in_community, [['Yes', true], ['No', false]] %></label><br>
+  </div>  
+
+  <%= f.submit 'Continue', :class => 'altbtn altbtn-lg altbtn-outline' %>
+  <% end %>
+
+
+
+
+</div>

@@ -1,0 +1,30 @@
+<div class="stretch">
+
+  <h1>Please Enter Your Address</h1>
+
+
+
+
+
+
+
+
+  <div class="form">
+
+  <%= form_for :user do |f| %>
+
+    <label>Address 1: <%= f.text_field :address_line_one %></label><br>
+    <label>Address 2: <%= f.text_field :address_line_two %></label><br>
+    <label>City: <%= f.text_field :city %></label><br>
+    <label>State/Province/Territory: <%= f.text_field :state %></label><br>
+     <label>Postal Code: <%= f.text_field :postal_code %></label><br>
+  </div>  
+
+  <%= f.submit 'Continue', :class => 'altbtn altbtn-lg altbtn-outline' %>
+  <% end %>
+
+
+
+
+
+</div>

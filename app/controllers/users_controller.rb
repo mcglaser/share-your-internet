@@ -15,6 +15,13 @@ class UsersController < ApplicationController
      end   
   end
 
+
+  def address
+  end
+
+
+
+
   def edit
   end
 

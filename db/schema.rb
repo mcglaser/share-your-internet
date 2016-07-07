@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706024139) do
+ActiveRecord::Schema.define(version: 20160707050202) do
 
   create_table "addresses", force: :cascade do |t|
     t.string  "address_line_one"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20160706024139) do
   end
 
   add_index "addresses", ["user_id"], name: "index_addresses_on_user_id"
+
+  create_table "details", force: :cascade do |t|
+    t.boolean "pays_for_internet"
+    t.boolean "lives_in_community"
+    t.integer "user_id"
+  end
+
+  add_index "details", ["user_id"], name: "index_details_on_user_id"
+
+  create_table "followups", force: :cascade do |t|
+    t.string  "internet_type"
+    t.string  "internet_speed"
+    t.integer "monthly_cost"
+    t.string  "community_name"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

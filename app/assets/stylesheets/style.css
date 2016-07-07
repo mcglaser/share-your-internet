@@ -19,6 +19,12 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+html { 
+    height:100%;
+}
+body { 
+    min-height:100%;
+}
 
 .top {
     background-color: #2C3E50;
