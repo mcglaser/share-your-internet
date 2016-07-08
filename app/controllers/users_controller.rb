@@ -17,6 +17,8 @@ class UsersController < ApplicationController
 
 
   def address
+    @user = User.find_by_id(params[:id])
+    session[:user_id] = @user.id
   end
 
 
@@ -32,15 +34,16 @@ class UsersController < ApplicationController
   end
 
   def index
+    @users = User.all
   end
 
-  def show
-    @user = User.find_by(id: params[:id])
-  end
+ def show
+  @user = User.find_by_id(params[:id])
+end
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :address_line_one, :address_line_two, :city, :state, :postal_code)
   end
 
 

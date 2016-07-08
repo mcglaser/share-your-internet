@@ -1,12 +1,13 @@
 class AddressesController < ApplicationController
 
 
+
   def new
        @address = Address.new
   end
 
   def create
-    @address = Address.create(address_params)  
+    @address = Address.create(address_params)
     if @address.valid?
       redirect_to root_url
     else
@@ -24,9 +25,11 @@ class AddressesController < ApplicationController
   end
 
   def index
+       @addresses = Address.all
   end
 
   def show
+
   end
 
 

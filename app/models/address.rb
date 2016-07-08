@@ -9,4 +9,7 @@ class Address < ActiveRecord::Base
   validates :postal_code, presence: true
   validates :postal_code, length: { is: 5 }
 
+
+  
+
 end

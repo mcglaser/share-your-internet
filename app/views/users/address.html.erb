@@ -20,8 +20,9 @@
      <label>Postal Code: <%= f.text_field :postal_code %></label><br>
   </div>  
 
-  <%= f.submit 'Continue', :class => 'altbtn altbtn-lg altbtn-outline' %>
+  <%= button_to("Continue", action: "address", controller: 'users', method: 'get') %>
   <% end %>
+
 
 
 
