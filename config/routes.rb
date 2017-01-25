@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   post '/details/new' => 'details#create'
   get '/user/address' => 'users#address' 
   post '/user/address' => 'users#address'
+  get 'employee' => 'static_pages#employee'
+  get '/auth/facebook/callback' => 'employees#create'
 
+  resources :employees
   resources :followups
   resources :details
   resources :addresses 

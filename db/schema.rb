@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707050202) do
+ActiveRecord::Schema.define(version: 20170124225314) do
 
   create_table "addresses", force: :cascade do |t|
     t.string  "address_line_one"
@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(version: 20160707050202) do
   end
 
   add_index "details", ["user_id"], name: "index_details_on_user_id"
+
+  create_table "employees", force: :cascade do |t|
+    t.string  "name"
+    t.string  "email"
+    t.integer "uid",   limit: 8
+  end
 
   create_table "followups", force: :cascade do |t|
     t.string  "internet_type"
